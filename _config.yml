@@ -21,7 +21,7 @@ author:
       icon: "fas fa-envelope"
       url: "mailto:your@email"
 
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes"
 
 # 以下為 Minimal Mistakes 標準設定（保持不動即可）
 plugins:
