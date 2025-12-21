@@ -1,7 +1,7 @@
-title: "HBM 技術專刊"
-subtitle: "從 HBM、HBM2 到 HBM3 的設計與應用指南"
+title: "Chris 的技術筆記"
+subtitle: "AI、記憶體技術與系統架構洞察"
 name: "Chris Lee"
-description: "彙整 Fibermall 對 HBM、HBM2、HBM3 的介紹，持續關注高頻寬記憶體的封裝、頻寬與應用動態。"
+description: "分享 AI 推論/訓練、伺服器架構、HBM 記憶體、散熱與硬體系統設計等主題，讓複雜技術變得清晰易懂。"
 
 locale: "zh-TW"
 lang: "zh-Hant"
@@ -9,7 +9,7 @@ lang: "zh-Hant"
 author:
   name: "Chris Lee"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "記錄 HBM 世代演進、封裝技術與應用案例。"
+  bio: "AI、記憶體技術與系統架構洞察。"
   links:
     - label: "GitHub"
       icon: "fab fa-github"
@@ -37,16 +37,3 @@ paginate_path: /page:num/
 markdown: kramdown
 kramdown:
   input: GFM
-
-# 文章預設版面與選項
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      toc: true
-      toc_label: "目錄"
-      toc_sticky: true
