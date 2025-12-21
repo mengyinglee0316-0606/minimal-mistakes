@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plum Skin Preview</title>
+  <style>
+    :root {
+      --background: #521477;
+      --text: #fffd86;
+      --primary: #c327ab;
+      --border: #6b228c;
+      --code-bg: #350c4d;
+      --footer-bg: #270834;
+      --link-hover: #d854c3;
+    }
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--footer-bg);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--border);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    header nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 1.25rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    header nav a:hover {
+      background: var(--primary);
+      color: var(--text);
+    }
+    .hero {
+      padding: 2.5rem 2rem;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1), transparent 45%),
+                  radial-gradient(circle at 80% 30%, rgba(255,255,255,0.08), transparent 40%),
+                  var(--background);
+      border-bottom: 2px solid var(--border);
+    }
+    .hero h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      max-width: 44rem;
+      margin: 0;
+      color: #fffec4;
+    }
+    .button-row {
+      margin-top: 1.5rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.65rem 1.1rem;
+      margin-right: 0.75rem;
+      background: var(--primary);
+      color: var(--text);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.3);
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      padding: 2rem;
+    }
+    .card {
+      background: var(--code-bg);
+      padding: 1.25rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.35rem;
+      color: var(--text);
+    }
+    .card p {
+      margin: 0;
+      color: #f6f0a6;
+    }
+    .footer {
+      background: var(--footer-bg);
+      padding: 1.25rem 2rem;
+      color: #f0e7a1;
+      border-top: 2px solid var(--border);
+      text-align: center;
+    }
+    .footer a {
+      color: var(--text);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Minimal Mistakes &middot; Plum Skin</h1>
+    <nav>
+      <a href="#">Archive</a>
+      <a href="#">Categories</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Bold contrast, playful purple.</h2>
+    <p>This preview highlights the Plum skin palette with soft yellow text on a rich purple backdrop. Buttons and navigation reuse the primary accent to match how the skin feels in the theme.</p>
+    <div class="button-row">
+      <a class="button" href="#">Read more</a>
+      <a class="button" href="#">See posts</a>
+    </div>
+  </section>
+  <section class="content">
+    <article class="card">
+      <h3>Readable on dark</h3>
+      <p>High-contrast text keeps long reads comfortable even on the deepest sections of the layout.</p>
+    </article>
+    <article class="card">
+      <h3>Accent links</h3>
+      <p>Links brighten toward magenta on hover to mirror the theme's navigation hover treatment.</p>
+    </article>
+    <article class="card">
+      <h3>Framed sections</h3>
+      <p>Thin borders set cards and content blocks apart without losing the cohesive purple glow.</p>
+    </article>
+  </section>
+  <footer class="footer">
+    <span>Plum skin preview &middot; Minimal Mistakes Jekyll theme</span>
+  </footer>
+</body>
+</html>

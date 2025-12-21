@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="mintGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#30e3ca" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#11999e" stop-opacity="0.8" />
+    </linearGradient>
+    <filter id="mintShadow" x="-20" y="-20" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#11999e" flood-opacity="0.22" />
+    </filter>
+  </defs>
+  <rect width="1440" height="900" fill="#f3f6f6" />
+  <rect x="0" y="0" width="1440" height="92" fill="#ffffff" stroke="#cfd8d7" stroke-width="2" />
+  <text x="48" y="56" fill="#40514e" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Minimal Mistakes · Mint Skin</text>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#40514e" text-anchor="end">
+    <text x="1180" y="56">Archive</text>
+    <text x="1270" y="56">Categories</text>
+    <text x="1370" y="56">About</text>
+  </g>
+  <rect x="0" y="92" width="1440" height="230" fill="#f3f6f6" stroke="#cfd8d7" stroke-width="2" />
+  <rect x="0" y="92" width="1440" height="230" fill="url(#mintGlow)" opacity="0.12" />
+  <text x="48" y="158" fill="#40514e" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700">Fresh, clean, and calm.</text>
+  <text x="48" y="198" fill="#5c6f6c" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400">This preview highlights the Mint skin's airy whites, teal accents, and softly muted text for restful reading.</text>
+  <text x="48" y="226" fill="#5c6f6c" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400">Buttons and navigation reuse the Mint accent to feel light but distinct.</text>
+  <rect x="48" y="246" width="168" height="48" rx="11" fill="#11999e" filter="url(#mintShadow)" />
+  <text x="72" y="276" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Start reading</text>
+  <rect x="232" y="246" width="148" height="48" rx="11" fill="#11999e" filter="url(#mintShadow)" />
+  <text x="256" y="276" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">See posts</text>
+  <g transform="translate(0,342)" stroke="#cfd8d7" stroke-width="2">
+    <rect x="48" y="0" width="404" height="240" rx="14" fill="#ffffff" filter="url(#mintShadow)" />
+    <rect x="518" y="0" width="404" height="240" rx="14" fill="#ffffff" filter="url(#mintShadow)" />
+    <rect x="988" y="0" width="404" height="240" rx="14" fill="#ffffff" filter="url(#mintShadow)" />
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#40514e" font-size="22" font-weight="700">
+    <text x="72" y="380">Readable neutrals</text>
+    <text x="542" y="380">Teal call-to-actions</text>
+    <text x="1012" y="380">Soft dividers</text>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#5c6f6c" font-size="18" font-weight="400">
+    <text x="72" y="414">Light backgrounds with gentle contrast help</text>
+    <text x="72" y="440">long-form content stay comfortable.</text>
+    <text x="542" y="414">Primary buttons and links use the Mint accent</text>
+    <text x="542" y="440">to guide attention without glare.</text>
+    <text x="1012" y="414">Subtle borders frame sections while</text>
+    <text x="1012" y="440">keeping the layout open and breathable.</text>
+  </g>
+  <rect x="0" y="708" width="1440" height="192" fill="#30e3ca" stroke="#cfd8d7" stroke-width="2" />
+  <text x="720" y="790" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Mint skin preview · Minimal Mistakes Jekyll theme</text>
+</svg>
