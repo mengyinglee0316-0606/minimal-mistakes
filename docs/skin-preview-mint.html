@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mint Skin Preview</title>
+  <style>
+    :root {
+      --background: #f3f6f6;
+      --text: #40514e;
+      --primary: #11999e;
+      --border: #bcd3d0;
+      --code-bg: #ffffff;
+      --footer-bg: #30e3ca;
+      --muted: #6b7b79;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #ffffff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 4px 18px rgba(17, 153, 158, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+    header nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 1.25rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 8px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    header nav a:hover {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    .hero {
+      padding: 2.5rem 2rem;
+      background: radial-gradient(circle at 20% 20%, rgba(48, 227, 202, 0.2), transparent 40%),
+                  radial-gradient(circle at 80% 25%, rgba(17, 153, 158, 0.15), transparent 45%),
+                  #f8fbfb;
+      border-bottom: 2px solid var(--border);
+    }
+    .hero h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      margin-bottom: 0.6rem;
+    }
+    .hero p {
+      max-width: 44rem;
+      margin: 0;
+      color: var(--muted);
+    }
+    .button-row {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.65rem 1.1rem;
+      background: var(--primary);
+      color: #ffffff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(17, 153, 158, 0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(17, 153, 158, 0.35);
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      padding: 2rem;
+    }
+    .card {
+      background: var(--code-bg);
+      padding: 1.25rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.35rem;
+      color: var(--text);
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .footer {
+      background: var(--footer-bg);
+      padding: 1.25rem 2rem;
+      color: #ffffff;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      font-weight: 600;
+    }
+    .footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Minimal Mistakes &middot; Mint Skin</h1>
+    <nav>
+      <a href="#">Archive</a>
+      <a href="#">Categories</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Crisp contrast, refreshing mint.</h2>
+    <p>This preview spotlights the Mint skin palette with cool teal accents on a light, airy canvas. Buttons and navigation share the same calming hue to match how the skin feels across the theme.</p>
+    <div class="button-row">
+      <a class="button" href="#">Read more</a>
+      <a class="button" href="#">See posts</a>
+    </div>
+  </section>
+  <section class="content">
+    <article class="card">
+      <h3>Open and breathable</h3>
+      <p>Light surfaces and subtle borders keep long reads easy on the eyes for bright-mode browsing.</p>
+    </article>
+    <article class="card">
+      <h3>Confident accents</h3>
+      <p>Links and buttons rely on the mint primary tone, echoing the skin’s navigation hover treatment.</p>
+    </article>
+    <article class="card">
+      <h3>Friendly footers</h3>
+      <p>A saturated footer band grounds the layout and mirrors the theme’s social section styling.</p>
+    </article>
+  </section>
+  <footer class="footer">
+    <span>Mint skin preview &middot; Minimal Mistakes Jekyll theme</span>
+  </footer>
+</body>
+</html>
