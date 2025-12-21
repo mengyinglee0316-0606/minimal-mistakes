@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqua Skin Preview</title>
+  <style>
+    :root {
+      --background: #f0fff0;
+      --text: #0f4b87;
+      --primary: #1976d2;
+      --muted: #2d6ca3;
+      --border: #c9e6ff;
+      --card: #ffffff;
+      --code-bg: #e9f4ff;
+      --link-hover: #0f5ba5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #ffffff;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 10px 24px rgba(15, 75, 135, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      letter-spacing: 0.04em;
+      color: var(--primary);
+    }
+    header nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.1rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    header nav a:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    .hero {
+      padding: 2.25rem 2rem;
+      background: radial-gradient(circle at 20% 20%, rgba(3, 169, 244, 0.12), transparent 42%),
+                  radial-gradient(circle at 80% 40%, rgba(25, 118, 210, 0.14), transparent 46%),
+                  linear-gradient(135deg, #f8ffff 0%, #e7f4ff 100%);
+      border-bottom: 2px solid var(--border);
+    }
+    .hero h2 {
+      margin-top: 0;
+      font-size: 2.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    .hero p {
+      max-width: 44rem;
+      margin: 0;
+      color: #1f5f93;
+    }
+    .button-row { margin-top: 1.25rem; }
+    .button {
+      display: inline-block;
+      padding: 0.65rem 1.1rem;
+      margin-right: 0.75rem;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 18px rgba(25, 118, 210, 0.22);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .button:hover {
+      transform: translateY(-1px);
+      background: #0f5ba5;
+      box-shadow: 0 12px 24px rgba(15, 91, 165, 0.26);
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      padding: 2rem;
+      background: linear-gradient(180deg, #f7fcff 0%, #f0fff0 100%);
+      flex: 1;
+    }
+    .card {
+      background: var(--card);
+      padding: 1.25rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.35rem;
+      color: var(--primary);
+    }
+    .card p {
+      margin: 0;
+      color: var(--text);
+    }
+    .footer {
+      background: #ffffff;
+      padding: 1.1rem 2rem;
+      color: var(--muted);
+      border-top: 2px solid var(--border);
+      text-align: center;
+    }
+    .footer a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Minimal Mistakes · Aqua Skin</h1>
+    <nav>
+      <a href="#">Archive</a>
+      <a href="#">Categories</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Fresh contrast with Aqua.</h2>
+    <p>This standalone preview reflects the Aqua skin palette: crisp blues, airy backgrounds, and confident links that stay legible on bright surfaces.</p>
+    <div class="button-row">
+      <a class="button" href="#">Read more</a>
+      <a class="button" href="#">See posts</a>
+    </div>
+  </section>
+  <section class="content">
+    <article class="card">
+      <h3>Clean headings</h3>
+      <p>Primary blue headlines stand out while keeping the light theme calm.</p>
+    </article>
+    <article class="card">
+      <h3>Comfortable reading</h3>
+      <p>Soft backgrounds with subtle borders mirror the Aqua skin’s contrast settings.</p>
+    </article>
+    <article class="card">
+      <h3>Link focus</h3>
+      <p>Hovering accents darken links for clear interactivity cues.</p>
+    </article>
+  </section>
+  <footer class="footer">
+    <span>Aqua skin preview · Minimal Mistakes Jekyll theme</span>
+  </footer>
+</body>
+</html>

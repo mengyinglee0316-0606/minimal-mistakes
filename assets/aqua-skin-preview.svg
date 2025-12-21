@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8ffff" />
+      <stop offset="100%" stop-color="#f0fff0" />
+    </linearGradient>
+    <linearGradient id="hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e7f4ff" />
+      <stop offset="100%" stop-color="#f3fcff" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur" />
+      <feOffset dy="4" dx="0" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)" />
+
+  <rect x="60" y="70" width="1320" height="110" rx="14" fill="#ffffff" stroke="#c9e6ff" stroke-width="3" filter="url(#shadow)" />
+  <text x="120" y="135" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#1976d2">Minimal Mistakes · Aqua Skin</text>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#2d6ca3" text-anchor="end">
+    <text x="1320" y="123">Archive</text>
+    <text x="1410" y="123">Categories</text>
+    <text x="1520" y="123">About</text>
+  </g>
+
+  <rect x="60" y="200" width="1320" height="240" rx="18" fill="url(#hero)" stroke="#c9e6ff" stroke-width="3" />
+  <text x="120" y="260" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#1976d2">Fresh contrast with Aqua.</text>
+  <text x="120" y="304" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1f5f93">This preview reflects the Aqua skin palette: crisp blues, airy backgrounds, and confident links.</text>
+  <g fill="#1976d2">
+    <rect x="120" y="340" width="170" height="52" rx="12" />
+    <rect x="310" y="340" width="170" height="52" rx="12" />
+  </g>
+  <text x="205" y="373" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Read more</text>
+  <text x="395" y="373" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">See posts</text>
+
+  <g transform="translate(60,470)" fill="#ffffff" stroke="#c9e6ff" stroke-width="3" filter="url(#shadow)">
+    <rect x="0" y="0" width="420" height="240" rx="14" />
+    <rect x="450" y="0" width="420" height="240" rx="14" />
+    <rect x="900" y="0" width="420" height="240" rx="14" />
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="120" y="540" font-size="26" font-weight="700" fill="#1976d2">Clean headings</text>
+    <text x="120" y="578" font-size="22" fill="#0f4b87">Primary blue headlines stand out while keeping the light theme calm.</text>
+
+    <text x="570" y="540" font-size="26" font-weight="700" fill="#1976d2">Comfortable reading</text>
+    <text x="570" y="578" font-size="22" fill="#0f4b87">Soft backgrounds with subtle borders mirror the Aqua skin.</text>
+
+    <text x="1020" y="540" font-size="26" font-weight="700" fill="#1976d2">Link focus</text>
+    <text x="1020" y="578" font-size="22" fill="#0f4b87">Hover accents darken links for clear interactivity cues.</text>
+  </g>
+
+  <rect x="60" y="740" width="1320" height="90" rx="14" fill="#ffffff" stroke="#c9e6ff" stroke-width="3" />
+  <text x="720" y="798" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#2d6ca3" text-anchor="middle">Aqua skin preview · Minimal Mistakes Jekyll theme</text>
+</svg>
