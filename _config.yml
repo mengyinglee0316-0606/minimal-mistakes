@@ -33,6 +33,8 @@ plugins:
 
 paginate: 5
 paginate_path: /page:num/
+timezone: Asia/Taipei
+future: true
 
 markdown: kramdown
 kramdown:
