@@ -231,4 +231,178 @@ $(document).ready(function () {
         container.prepend(copyButton);
       });
   }
+
+  // Ambient background snake animation that avoids text
+  (function () {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    var canvas = document.createElement("canvas");
+    canvas.id = "ambient-snake";
+    canvas.className = "ambient-snake";
+    canvas.setAttribute("aria-hidden", "true");
+    document.body.appendChild(canvas);
+
+    var ctx = canvas.getContext("2d");
+    var obstacles = [];
+    var snake = [];
+    var width = 0;
+    var height = 0;
+    var direction = null;
+    var lastTick = 0;
+    var speed = 2.4;
+    var maxLength = 160;
+    var headSize = 8;
+    var frameInterval = 32;
+    var directions = [
+      { x: 1, y: 0 },
+      { x: -1, y: 0 },
+      { x: 0, y: 1 },
+      { x: 0, y: -1 },
+    ];
+
+    var debounce = function (fn, delay) {
+      var timer;
+      return function () {
+        var args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          fn.apply(null, args);
+        }, delay);
+      };
+    };
+
+    var collectObstacles = function () {
+      var padding = 8;
+      var textSelectors =
+        "p, h1, h2, h3, h4, h5, h6, li, blockquote, figcaption, header, footer, nav, aside, .page__title, .masthead, .page__meta";
+      obstacles = Array.prototype.slice
+        .call(document.querySelectorAll(textSelectors))
+        .filter(function (element) {
+          return element.offsetParent !== null;
+        })
+        .map(function (element) {
+          var rect = element.getBoundingClientRect();
+          return {
+            left: rect.left - padding,
+            right: rect.right + padding,
+            top: rect.top - padding,
+            bottom: rect.bottom + padding,
+          };
+        });
+    };
+
+    var resizeCanvas = function () {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+      collectObstacles();
+      if (!snake.length) spawnSnake();
+    };
+
+    var collides = function (x, y) {
+      if (x < headSize || y < headSize || x > width - headSize || y > height - headSize) {
+        return true;
+      }
+      for (var i = 0; i < obstacles.length; i++) {
+        var rect = obstacles[i];
+        if (
+          x + headSize > rect.left &&
+          x - headSize < rect.right &&
+          y + headSize > rect.top &&
+          y - headSize < rect.bottom
+        ) {
+          return true;
+        }
+      }
+      return false;
+    };
+
+    var spawnSnake = function () {
+      for (var i = 0; i < 40; i++) {
+        var startX = Math.random() * (width - 2 * headSize) + headSize;
+        var startY = Math.random() * (height - 2 * headSize) + headSize;
+        if (!collides(startX, startY)) {
+          snake = [{ x: startX, y: startY }];
+          direction = directions[Math.floor(Math.random() * directions.length)];
+          return;
+        }
+      }
+      snake = [{ x: width / 2, y: height / 2 }];
+      direction = directions[0];
+    };
+
+    var shuffledDirections = function () {
+      var pool = directions.slice();
+      for (var i = pool.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = pool[i];
+        pool[i] = pool[j];
+        pool[j] = temp;
+      }
+      return pool;
+    };
+
+    var chooseDirection = function () {
+      var head = snake[0];
+      var candidates = shuffledDirections().filter(function (option) {
+        return !(direction && option.x === -direction.x && option.y === -direction.y);
+      });
+      for (var i = 0; i < candidates.length; i++) {
+        var option = candidates[i];
+        var nextX = head.x + option.x * headSize * 1.5;
+        var nextY = head.y + option.y * headSize * 1.5;
+        if (!collides(nextX, nextY)) return option;
+      }
+      return direction || candidates[0];
+    };
+
+    var step = function (timestamp) {
+      if (!lastTick) lastTick = timestamp;
+      var delta = timestamp - lastTick;
+      if (delta < frameInterval) {
+        requestAnimationFrame(step);
+        return;
+      }
+      lastTick = timestamp;
+
+      var head = snake[0];
+      var nextDirection = chooseDirection();
+      var nextX = head.x + nextDirection.x * speed * (delta / frameInterval);
+      var nextY = head.y + nextDirection.y * speed * (delta / frameInterval);
+
+      if (collides(nextX, nextY)) {
+        nextDirection = chooseDirection();
+        nextX = head.x + nextDirection.x * speed;
+        nextY = head.y + nextDirection.y * speed;
+      }
+
+      direction = nextDirection;
+      snake.unshift({ x: nextX, y: nextY });
+      if (snake.length > maxLength) {
+        snake.pop();
+      }
+
+      ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
+      ctx.fillRect(0, 0, width, height);
+      ctx.lineWidth = headSize;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.strokeStyle = "rgba(71, 192, 146, 0.7)";
+
+      ctx.beginPath();
+      ctx.moveTo(snake[0].x, snake[0].y);
+      for (var i = 1; i < snake.length; i++) {
+        ctx.lineTo(snake[i].x, snake[i].y);
+      }
+      ctx.stroke();
+
+      requestAnimationFrame(step);
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", debounce(resizeCanvas, 200));
+    window.addEventListener("scroll", debounce(collectObstacles, 200));
+    requestAnimationFrame(step);
+  })();
 });
