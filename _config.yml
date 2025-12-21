@@ -37,3 +37,16 @@ paginate_path: /page:num/
 markdown: kramdown
 kramdown:
   input: GFM
+
+# 文章預設版面與選項
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      toc: true
+      toc_label: "目錄"
+      toc_sticky: true
